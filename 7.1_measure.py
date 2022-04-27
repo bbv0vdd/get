@@ -58,4 +58,4 @@ try:
 finally:
     GPIO.output(dac, 0)
 with open("data.txt", "w") as outfile:
-    outfile.write("\n".join(measured_data))
+    outfile.write("\n".join(list(map(lambda x: str(x), measured_data))))
